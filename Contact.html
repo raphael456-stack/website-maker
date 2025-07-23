@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Personal Website</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+<section class = "headline">
+<table border = "0">
+<tr>
+<th style="width:30%"><img src = "file:///C:/Users/renzj/Downloads/IBM%20Plex%20Mono.jpg%201.jpg" width = "195" height = "65" class = "hap"></th>
+<th><a href="Palima_lab6.html"><button>Home</button></a></th>
+<th><a href="Aboutme.html"><button>About</button></th>
+<th><a href="#"><button>Contact</button></th>
+<th><a href="#"><button>Click Me!</button></th>
+</tr>
+</table>
+</section>
+
+<br></br>
+<br></br>
+
+
+ <div class="container">
+
+    <div class="title">Contact Form</div>
+    <div class="content">
+	<div class="pad">
+    
+      <form id = "contactForm" name = "Contact Form" action = "Contact.php" align =  "center">
+        <div class="user-details">
+
+          <div class="input-box">
+            <span class="details"><b>Name</b></span>
+            <input type="text" name="name" placeholder="Enter your name" required>
+          </div>
+     
+          <div class="input-box">
+            <span class="details"><b>Email Address</b></span>
+            <input type="email" name="email" placeholder="Enter your email address" id="emailInput"
+       pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+       oninvalid="setCustomValidity('Please enter a valid email address')"
+       oninput="setCustomValidity('')" required>
+          </div>
+         
+          <div class="input-box">
+            <span class="details"><b>Contact Number</b></span>
+            <input type="number" name="number" placeholder="Enter your contact number" required>
+          </div>
+ 
+          <div class="input-box">
+            <span class="details"><b>Topic</b></span>
+            <input type="text" name="topic" placeholder="What is the topic?" required>
+          </div>
+		  
+		  <div class="input-box">
+            <span class="details"><b>Your comments on this website?</b></span>
+		    <textarea name="comments" rows="10" placeholder="Enter your comments" required>
+            </textarea>
+		  </div>
+        </div>
+        
+
+        <div class="button">
+          <input type="submit" value="Submit" onclick = "validateForm()">
+        </div>
+		
+		</div>
+      </form>
+    </div>
+  </div>
+<p id="errorMsg" style="color: red;"></p>
+
+<br></br>
+<br></br>
+ 
+<section class = "tab">
+<table align = "center">
+<tr align = "center">
+<th>© 2025 My Website</th><th>All Rights Reserved</th><th><a href="https://www.facebook.com/rafael.palima.395">facebook.com/rafael.palima.395</a><th><a href="https://paraverse.feutech.edu.ph/briefcase/profile">briefcase/profile</a></th>
+</tr>
+</table>
+</section>
+
+<script>
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbz0InxXhA0YkKeqzOgRU-I0q7LYI1533IIIeY1Ejo9lcooU9O792I5bBeqLaA1ZWfXZSw/exec";
+const contactForm = document.getElementById("contactForm");
+const responseMsg = document.getElementById("submit");
+const inputs = contactForm.querySelectorAll("input, textarea"); // Assuming these are your form fields
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let allFilled = true;
+  errorMsg.innerText = "";
+  inputs.forEach(input => input.classList.remove("error"));
+
+  inputs.forEach(input => {
+    if (input.value.trim() === "") {
+      input.classList.add("error");
+      allFilled = false;
+    }
+  });
+  
+  if (confirm("Message sent successfully! Would you like to fill out another form?")) {
+    contactForm.reset();
+    } else {
+      alert("Thank you for participating!");
+      window.location.assign('Palima_lab6.html');
+    }
+});
+
+
+</script>
+
+</body>
+</html>
+

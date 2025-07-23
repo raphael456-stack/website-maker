@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>My Personal Website</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+<section class = "headline" id = "head">
+<table border = "0">
+<tr>
+<th style="width:30%"><img src = "file:///C:/Users/renzj/Downloads/IBM%20Plex%20Mono.jpg%201.jpg" width = "195" height = "65" class = "hap"></th>
+<th><a href="#"><button>Home</button></a></th>
+<th><a href="Aboutme.html"><button>About</button></th>
+<th><a href="Contact.html"><button>Contact</button></th>
+<th><button id="colorChangeButton">Click Me!</button></th>
+</tr>
+</table>
+</section>
+
+<br></br>
+
+<section>
+<img src = "file:///C:/Users/renzj/Downloads/IBM%20Plex%20Mono.jpg%202.jpg" width = "400" height = "400">
+<h1>Welcome!</h1>
+<p>Welcome everyobdy! This is my first website ever. Making this website is one of the most hardest thing I've ever done.</p>
+<p>It is not really easy as it looks. There is so many things you have to fix when one error messes everything. However,</p>
+<p>I still able to persist beause of my determination to finish this project. I faced a lot of issues working on this, but</p>
+<p>I'm still able to figure out using my knowledge and research on making a website. I am glad that I am able to finish this</p>
+<p>project. As much that it gives me hard time making this one, I still able to learn something that is helpful to my future.</p>
+<p>Thank you for reading!</p>
+</section>
+
+<br></br>
+<br></br>
+<br></br>
+
+
+<section class = "list">
+<table align = "center">
+<tr align = "center">
+<th colspan = "2"><h2>Projects</h2></th>
+</tr>
+<tr align = "center">
+<td><a href="Palima_lab2.html"><button>Project A</button></td><td><a href="Palima_lab3.html"><button>Project B</button></td>
+</tr>
+<tr align = "center">
+<td><a href="Palima_lab4.html"><button>Project C</button></td><td><a href="Palima_lab5.html"><button>Project D</button></td>
+</tr>
+</table>
+</section>
+
+<br></br>
+<br></br>
+<br></br>
+
+<section class = "tab">
+<table align = "center">
+<tr align = "center">
+<th>© 2025 My Website</th><th>All Rights Reserved</th><th><a href="https://www.facebook.com/rafael.palima.395">facebook.com/rafael.palima.395</a><th><a href="https://paraverse.feutech.edu.ph/briefcase/profile">briefcase/profile</a></th>
+</tr>
+</table>
+</section>
+
+ 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.getElementById('head');
+    const button = document.getElementById('colorChangeButton');
+
+    let isFirstColorSet = true; 
+
+    button.addEventListener('click', () => {
+        if (isFirstColorSet) {
+            section.style.backgroundColor = 'darkgreen';
+        } else {
+            section.style.backgroundColor = 'orange';
+        }
+        isFirstColorSet = !isFirstColorSet; 
+    });
+});
+</script>
+
+</body>
+</html>

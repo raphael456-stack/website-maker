@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+<meta charset="UTF-8">
+<title>My Personal Website</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+ 
+<body>
+ 
+<section class = "headline" id = "head">
+<table border = "0">
+<tr>
+<th style="width:30%"><img src = "file:///C:/Users/renzj/Downloads/IBM%20Plex%20Mono.jpg%201.jpg" width = "195" height = "65" class = "hap"></th>
+<th><a href="Palima_lab6.html"><button>Home</button></a></th>
+<th><a href="#"><button>About</button></a></th>
+<th><a href="Contact.html"><button>Contact</button></a></th>
+<th><button id="colorChangeButton">Click Me!</button></th>
+</tr>
+</table>
+</section>
+
+<br></br>
+<br></br>
+
+<section>
+<img src = "file:///C:/Users/renzj/Downloads/OM_1736926860522.jpeg" width = "400" height = "400">
+<h1>Introduction</h1>
+<p>Hello Everybody! Today, this is my first website I am going to create to test what I learned about this subject!</p>
+<p>But first, let me introduce about myself. My name is Rafael M. Palima and I'm from TC01 - IT0043. I am 20 years</p>
+<p>old, living in Quezon City with my family. My hobby is to read books, draw sketches, and watch movies and tv series.</p>
+<p>My favorite things to do is to eat sweets, especially chocolates, and ride my bicycle to explore some new areas. I am</p>
+<p>some new areas. I am not usually the greatest of creating websites, but I am willing to learn some new knowledge about</p>
+<p>this course and use my knowledge when necessary.</p>
+</section> 
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<section class = "tab">
+<table align = "center">
+<tr align = "center">
+<th>© 2025 My Website</th><th>All Rights Reserved</th><th><a href="https://www.facebook.com/rafael.palima.395">facebook.com/rafael.palima.395</a><th><a href="https://paraverse.feutech.edu.ph/briefcase/profile">briefcase/profile</a></th>
+</tr>
+</table>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const section = document.getElementById('head');
+    const button = document.getElementById('colorChangeButton');
+
+    let isFirstColorSet = true; 
+
+    button.addEventListener('click', () => {
+        if (isFirstColorSet) {
+            section.style.backgroundColor = 'darkgreen';
+        } else {
+            section.style.backgroundColor = 'orange';
+        }
+        isFirstColorSet = !isFirstColorSet; 
+    });
+});
+</script>
+
+</body>
+</html>
